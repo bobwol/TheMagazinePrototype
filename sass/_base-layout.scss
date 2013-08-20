@@ -1,0 +1,15 @@
+$background-color: #FFF;
+$color: #000;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color: $color;
+}
+
+h1 {
+  font-weight: 200;
+}
