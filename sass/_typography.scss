@@ -1,0 +1,141 @@
+// Declare Fonts for The Magazine
+// Fonts from Hoefler & Frere-Jones -- Cloud.typography
+
+$tungsten: 'Tungsten A', 'Tungsten B';
+$gotham: "Gotham A", "Gotham B";
+
+// Mercury ScreenSmart -- specifically for small text 9px to 22px
+$mercury-screensmart: "Mercury SSm A", "Mercury SSm B";
+
+@mixin tungsten-book() {
+  font-family: $tungsten;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin tungsten-bold() {
+  font-family: $tungsten;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin gotham-light() {
+  font-family: $gotham;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin gotham-book() {
+  font-family: $gotham;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin gotham-medium() {
+  font-family: $gotham;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin gotham-bold() {
+  font-family: $gotham;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin mercury-book-sm() {
+  font-family: $mercury-screensmart;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin mercury-italic-sm() {
+  font-family: $mercury-screensmart;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin mercury-bold-sm() {
+  font-family: $mercury-screensmart;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin mercury-bold-italic-sm() {
+  font-family: $mercury-screensmart;
+  font-weight: 700;
+  font-style: italic;
+}
+
+// Basic colors are set here
+// --------------------------- //
+$body-copy-color: #7D7674;
+$heading-color: #333;
+
+// Font sizes -- 16px is 1em
+
+$font-size-9: 0.563em;   
+$font-size-10: 0.635em;
+$font-size-11: 0.688em;
+$font-size-12: 0.750em;
+$font-size-13: 0.813em;
+$font-size-14: 0.875em;
+$font-size-15: 0.938em;
+$font-size-16: 1.000em;
+$font-size-17: 1.063em;
+$font-size-18: 1.125em;
+$font-size-20: 1.250em;
+$font-size-22: 1.375em;
+$font-size-24: 1.500em;
+$font-size-26: 1.625em;
+$font-size-28: 1.750em;
+$font-size-30: 1.875em;
+$font-size-34: 2.125em;
+$font-size-40: 2.5em;
+$font-size-56: 3.5em;
+$font-size-72: 4.5em;
+
+h1,
+h2,
+h3,
+h4 {
+  color: $heading-color;
+  @include gotham-medium();
+}
+
+h1.tungsten-head,
+h2.tungsten-head,
+h3.tungsten-head,
+h4.tungsten-head {
+  color: $heading-color;
+  @include tungsten-bold();
+}
+
+h1 {
+  font-size: $font-size-28;
+}
+
+h1.tungsten-head {
+  font-size: $font-size-72;
+}
+
+h2 {
+  font-size: $font-size-24;
+}
+
+h3 {
+  font-size: $font-size-20;
+}
+
+h4 {
+  font-size: $font-size-18;
+}
+
+h5 {
+  font-size: $font-size-16;
+}
+
+em {
+  @include mercury-italic-sm();
+  color: #CCC;
+}

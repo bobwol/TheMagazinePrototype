@@ -14,6 +14,7 @@ module.exports = function(grunt) {
           'public/style.css': 'sass/_typography.scss',
           'public/style.css': 'sass/_grids.scss',
           'public/style.css': 'sass/_header.scss',
+          'public/style.css': 'sass/_front-page.scss',
           'public/style.css': 'sass/_footer.scss',
           'public/style.css': 'sass/_base-layout.scss',
           'public/style.css': 'sass/global.scss'

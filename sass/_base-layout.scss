@@ -5,11 +5,65 @@ $color: #000;
   box-sizing: border-box;
 }
 
-body {
-  background-color: $background-color;
-  color: $color;
+a {
+  text-decoration: none;
+  color: #555;
+  transition: all 400ms ease;
 }
 
-h1 {
-  font-weight: 200;
+a:hover {
+  color: #A061AA;
+  transition: all 400ms ease;
+}
+
+p {
+  a {
+    text-decoration: underline;
+  }
+}
+
+ol, ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  @include mercury-book-sm();
+  line-height: 1.8em;
+}
+
+[data-std-icon]:before {
+  font-family: "SSStandard";
+  content: attr(data-std-icon);
+  speak: none;
+}
+
+[data-social-icon]:before {
+  font-family: "SSSocialRegular";
+  content: attr(data-social-icon);
+  speak: none;
+}
+
+.icon-alone {
+  display: inline-block;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+body {
+  background-color: $background-color; 
+  color: $body-copy-color;
+}
+
+.wrap {
+    max-width: 1400px;
+    width: 100%;
+  @include breakpoint(tabletportrait) {
+    width: 92%;
+    margin: 0 auto; 
+  }
 }
