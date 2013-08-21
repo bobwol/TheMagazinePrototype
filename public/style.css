@@ -186,11 +186,90 @@ nav[role=navigation].active {
 .featuredArticle {
   position: relative; }
   .featuredArticle .featureText {
+    color: #FFF;
+    width: 10em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.35); }
+  .featuredArticle .featureHeading {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 30px;
+    font-family: "Gotham A", "Gotham B";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5em;
+    line-height: 28px; }
+    @media (max-width: 20em) {
+      .featuredArticle .featureHeading {
+        display: none; } }
+    @media only screen and (min-width: 48em) {
+      .featuredArticle .featureHeading {
+        font-size: 2.5em;
+        line-height: 45px; } }
+  .featuredArticle .author {
+    position: absolute;
+    bottom: 10px;
+    left: 30px; }
+    @media (max-width: 20em) {
+      .featuredArticle .author {
+        display: none; } }
+    .featuredArticle .author img {
+      border-radius: 50px;
+      display: inline-block;
+      width: 50px;
+      height: 50px; }
+    .featuredArticle .author .featureAuthor {
+      display: inline-block;
+      font-family: "Gotham A", "Gotham B";
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.25em;
+      position: relative;
+      bottom: 15px; }
   .featuredArticle img {
     width: 100%; }
+
+.primaryContainer:before, .primaryContainer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+.primaryContainer:after {
+  clear: both; }
+.primaryContainer .primaryContent {
+  min-height: 675px; }
+  @media only screen and (min-width: 48em) {
+    .primaryContainer .primaryContent {
+      width: 96%;
+      float: left;
+      margin-left: -300px;
+      box-sizing: border-box; } }
+  @media only screen and (min-width: 48em) {
+    .primaryContainer .primaryContent .content {
+      margin-left: 300px; } }
+.primaryContainer .trending-horizontal ul:before, .primaryContainer .trending-horizontal ul:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+.primaryContainer .trending-horizontal ul:after {
+  clear: both; }
+.primaryContainer .trending-horizontal ul li {
+  float: left;
+  margin-left: 10px;
+  width: 30.3333%; }
+  .primaryContainer .trending-horizontal ul li img {
+    max-width: 100%;
+    min-width: 314px;
+    min-height: 210px; }
+.primaryContainer .trending-horizontal ul li:first-child {
+  margin-left: 0; }
+.primaryContainer .sidebarContainer {
+  min-height: 675px; }
+  @media only screen and (min-width: 48em) {
+    .primaryContainer .sidebarContainer {
+      width: 300px;
+      float: right;
+      clear: right; } }
 
 * {
   box-sizing: border-box; }
