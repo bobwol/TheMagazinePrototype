@@ -13,6 +13,12 @@ $mercury-screensmart: "Mercury SSm A", "Mercury SSm B";
   font-style: normal;
 }
 
+@mixin tungsten-semibold() {
+  font-family: $tungsten;
+  font-weight: 600;
+  font-style: normal;
+}
+
 @mixin tungsten-bold() {
   font-family: $tungsten;
   font-weight: 700;
