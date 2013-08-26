@@ -25,7 +25,10 @@
 
   .author {
     position: absolute;
-    bottom: 10px;
+    bottom: -10px;
+    @include breakpoint(mobilelandscape) {
+      bottom: 10px;
+    }
     left: 30px;    
     @include mobile-portrait-and-below() {
       display: none;  
@@ -39,7 +42,10 @@
     .featureAuthor {
       display: inline-block;
       @include gotham-book();
-      font-size: $font-size-20;
+      font-size: $font-size-14;
+      @include breakpoint(mobilelandscape) {
+        font-size: $font-size-20;
+      }
       position: relative;
       bottom: 15px;
     }
@@ -62,6 +68,10 @@
     }
     .content {
       margin-bottom: 2.5em;
+      @include tablet-portrait-and-below {
+        margin: 0 auto; 
+        width: 95%;
+      }
       @include breakpoint(tabletportrait) {
         margin-left: 300px;
       }
@@ -70,6 +80,8 @@
 
   .sidebarContainer {
     min-height: 675px;
+    width: 100%;
+    float: none;
     @include breakpoint(tabletportrait) {
       width: 300px;
       float: right;
@@ -95,8 +107,9 @@
         background: rgba(0,0,0,.35);        
       }
       p {
+        display: block;
         @include gotham-book();
-        font-size: $font-size-24;
+        font-size: $font-size-14;
         text-align: center;
         position: absolute;
         top: 20%;
@@ -105,6 +118,12 @@
         text-shadow: 0 0 10px rgba(0,0,0,0.35);
         width: 100%;
         line-height: 1.2em;
+        @include mobile-portrait-and-below {
+          display:none;  
+        }
+        @include breakpoint(tabletlandscape) {
+          font-size: $font-size-24;
+        }
       }
       img {
         max-width: 100%;
@@ -121,22 +140,37 @@
   box-sizing: border-box;
   margin-top: 2.5em;
   .articleThumbImg {
-    float: left;
-    width: 35%;
+    float: none;
+    width: 100%;
+    @include breakpoint(tabletportrait) {
+      float: left;
+      width: 35%;
+    }
     img {
       max-width: 100%;
       height: 300px;
     }
   }
   .articleMeta {
-    float: left;
-    width: 63%;
-    margin-left: 2%;
+    float: none;
+    width: 100%;
+    h2 {
+      margin-top: 10px;
+      font-size: $font-size-18;
+      @include breakpoint(mobilelandscape) {
+        font-size: $font-size-24;
+      }
+      @include breakpoint(tabletportrait) {
+        margin-top: 0;
+      }
+    }
+    @include breakpoint(tabletportrait) {
+      float: left;
+      width: 63%;
+      margin-left: 2%;
+    }
     height: 300px;
     overflow: hidden;
-    h2 {
-      margin: 0;
-    }
     .articleAuthor,
     .articleSnippet {
       color: #333;
@@ -154,6 +188,12 @@
       font-size: $font-size-14;
       position: relative;
       left: 5px;
+    }
+    .articleSnippet {
+      font-size: $font-size-14;
+      @include breakpoint(mobilelandscape) {
+        font-size: $font-size-16;
+      }
     }
   }
 }
@@ -193,79 +233,3 @@
   }
 }
 
-footer {
-  background: #333; 
-  @include clear();
-}
-
-.footerContainer {
-  width: 88%;
-  margin: 0 auto;
-  .footerFirstRow {
-    @include clear();
-    .footerHeading {
-      float: left;
-      width: 70%;
-    }
-    .footerSocial {
-      float: left;
-      width: 30%;
-    }
-  }
-  .footerSecondRow {
-    @include clear();
-    .footerMenu {
-      margin: 0; 
-      padding-bottom: 20px;
-      width: 180px;
-      li {
-        @include gotham-book();
-        text-align: right;
-        margin: 10px 0;
-        a {
-          color: #FFF;
-        }
-      }
-    }
-  }
-
-  .footerThirdRow {
-    text-align: center;
-    .footerCopyright {
-      @include gotham-book();
-      font-size: $font-size-14;
-      padding: 15px 0;
-    }
-  }
-}
-
-.footerHeading {
-  h2.tungsten-head {
-    color: #FFF;
-    display: inline-block;
-    font-size: $font-size-40;
-    @include tungsten-semibold();
-  }
-  p.footerTag {
-    margin: 0 0 0 15px;
-    padding: 0;
-    display: inline-block;
-    @include gotham-book();
-  }
-}
-
-.footerSocial {
-  position: relative;
-  top: 40px;
-  left: 40px;
-  padding: 0;
-  margin: 0;
-  li:first-child {
-    margin-left: 0;
-  }
-  li {
-    display: inline-block;
-    font-size: $font-size-40;
-    margin-left: 25px;
-  }
-}

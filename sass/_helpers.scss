@@ -9,6 +9,7 @@ $mq-mobile-landscape  : 30em !default;
 $mq-tablet-portrait : 48em !default;
 $mq-tablet-landscape  : 64em !default;
 $mq-desktop   : 86.375em !default;
+$mq-mini-desktop : 67.813em !default;
 
 // Float clearing clearfix mixin
 @mixin clear() {
@@ -66,6 +67,12 @@ $mq-desktop   : 86.375em !default;
 // Everything below and including the portrait width of the tablet
 @mixin tablet-portrait-and-below {
   @media only screen and (max-width : $mq-tablet-portrait) {
+    @content;
+  }
+}
+
+@mixin mini-desktop-and-below {
+  @media only screen and (max-width : $mq-mini-desktop) {
     @content;
   }
 }

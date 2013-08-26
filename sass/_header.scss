@@ -70,7 +70,7 @@ header {
   margin-bottom: -5px;
   li {
     background: #333;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     display: block;
     padding: 20px 0;
   }
@@ -79,7 +79,7 @@ header {
       background: transparent;
       border-bottom: none;
       display: inline-block;
-      padding: 0 1.5em;
+      padding: 0 0.8em;
     }
   }
 }
@@ -91,9 +91,15 @@ header {
 .navContent li a {
   @include gotham-light();
   color: #FFF;
-  font-size: $font-size-24;
+  font-size: $font-size-22;
   @include breakpoint(tabletportrait) {
     color: #333;
+    font-size: $font-size-14;
+  }
+  @include breakpoint(tabletlandscape) {
+    font-size: $font-size-18;
+  }
+  @include breakpoint(desktop) {
     font-size: $font-size-20;
   }
 }
