@@ -366,13 +366,21 @@ footer {
   background: #333; }
 
 .footerContainer {
-  font-size: 2.5em;
   width: 88%;
   margin: 0 auto; }
   .footerContainer h2.tungsten-head {
     color: #FFF;
+    display: inline-block;
+    font-size: 2.5em;
     font-family: "Tungsten A", "Tungsten B";
     font-weight: 600;
+    font-style: normal; }
+  .footerContainer p.footerTag {
+    margin: 0 0 0 15px;
+    padding: 0;
+    display: inline-block;
+    font-family: "Gotham A", "Gotham B";
+    font-weight: 400;
     font-style: normal; }
 
 * {

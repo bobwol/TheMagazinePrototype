@@ -197,11 +197,18 @@ footer {
 }
 
 .footerContainer {
-  font-size: $font-size-40;
   width: 88%;
   margin: 0 auto;
   h2.tungsten-head {
     color: #FFF;
+    display: inline-block;
+    font-size: $font-size-40;
     @include tungsten-semibold();
+  }
+  p.footerTag {
+    margin: 0 0 0 15px;
+    padding: 0;
+    display: inline-block;
+    @include gotham-book();
   }
 }
