@@ -362,9 +362,13 @@ nav[role=navigation].active {
       color: #333;
       font-size: 1.125em; }
 
+footer {
+  background: #333; }
+
 .footerContainer {
-  background: #333;
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  width: 88%;
+  margin: 0 auto; }
   .footerContainer h2.tungsten-head {
     color: #FFF;
     font-family: "Tungsten A", "Tungsten B";
