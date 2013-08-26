@@ -53,7 +53,7 @@
   @include clear();
 
   .primaryContent {
-    min-height: 675px;
+    //min-height: 675px;
     @include breakpoint(tabletportrait) {
       width: 96%;
       float: left;
@@ -61,6 +61,7 @@
       box-sizing: border-box;
     }
     .content {
+      margin-bottom: 2.5em;
       @include breakpoint(tabletportrait) {
         margin-left: 300px;
       }
@@ -194,11 +195,51 @@
 
 footer {
   background: #333; 
+  @include clear();
 }
 
 .footerContainer {
   width: 88%;
   margin: 0 auto;
+  .footerFirstRow {
+    @include clear();
+    .footerHeading {
+      float: left;
+      width: 70%;
+    }
+    .footerSocial {
+      float: left;
+      width: 30%;
+    }
+  }
+  .footerSecondRow {
+    @include clear();
+    .footerMenu {
+      margin: 0; 
+      padding-bottom: 20px;
+      width: 180px;
+      li {
+        @include gotham-book();
+        text-align: right;
+        margin: 10px 0;
+        a {
+          color: #FFF;
+        }
+      }
+    }
+  }
+
+  .footerThirdRow {
+    text-align: center;
+    .footerCopyright {
+      @include gotham-book();
+      font-size: $font-size-14;
+      padding: 15px 0;
+    }
+  }
+}
+
+.footerHeading {
   h2.tungsten-head {
     color: #FFF;
     display: inline-block;
@@ -210,5 +251,21 @@ footer {
     padding: 0;
     display: inline-block;
     @include gotham-book();
+  }
+}
+
+.footerSocial {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  padding: 0;
+  margin: 0;
+  li:first-child {
+    margin-left: 0;
+  }
+  li {
+    display: inline-block;
+    font-size: $font-size-40;
+    margin-left: 25px;
   }
 }

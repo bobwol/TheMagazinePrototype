@@ -235,14 +235,14 @@ nav[role=navigation].active {
   overflow: hidden; }
 .primaryContainer:after {
   clear: both; }
-.primaryContainer .primaryContent {
-  min-height: 675px; }
-  @media only screen and (min-width: 48em) {
-    .primaryContainer .primaryContent {
-      width: 96%;
-      float: left;
-      margin-left: -300px;
-      box-sizing: border-box; } }
+@media only screen and (min-width: 48em) {
+  .primaryContainer .primaryContent {
+    width: 96%;
+    float: left;
+    margin-left: -300px;
+    box-sizing: border-box; } }
+.primaryContainer .primaryContent .content {
+  margin-bottom: 2.5em; }
   @media only screen and (min-width: 48em) {
     .primaryContainer .primaryContent .content {
       margin-left: 300px; } }
@@ -364,24 +364,85 @@ nav[role=navigation].active {
 
 footer {
   background: #333; }
+  footer:before, footer:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  footer:after {
+    clear: both; }
 
 .footerContainer {
   width: 88%;
   margin: 0 auto; }
-  .footerContainer h2.tungsten-head {
-    color: #FFF;
+  .footerContainer .footerFirstRow:before, .footerContainer .footerFirstRow:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .footerContainer .footerFirstRow:after {
+    clear: both; }
+  .footerContainer .footerFirstRow .footerHeading {
+    float: left;
+    width: 70%; }
+  .footerContainer .footerFirstRow .footerSocial {
+    float: left;
+    width: 30%; }
+  .footerContainer .footerSecondRow:before, .footerContainer .footerSecondRow:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .footerContainer .footerSecondRow:after {
+    clear: both; }
+  .footerContainer .footerSecondRow .footerMenu {
+    margin: 0;
+    padding-bottom: 20px;
+    width: 180px; }
+    .footerContainer .footerSecondRow .footerMenu li {
+      font-family: "Gotham A", "Gotham B";
+      font-weight: 400;
+      font-style: normal;
+      text-align: right;
+      margin: 10px 0; }
+      .footerContainer .footerSecondRow .footerMenu li a {
+        color: #FFF; }
+  .footerContainer .footerThirdRow {
+    text-align: center; }
+    .footerContainer .footerThirdRow .footerCopyright {
+      font-family: "Gotham A", "Gotham B";
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.875em;
+      padding: 15px 0; }
+
+.footerHeading h2.tungsten-head {
+  color: #FFF;
+  display: inline-block;
+  font-size: 2.5em;
+  font-family: "Tungsten A", "Tungsten B";
+  font-weight: 600;
+  font-style: normal; }
+.footerHeading p.footerTag {
+  margin: 0 0 0 15px;
+  padding: 0;
+  display: inline-block;
+  font-family: "Gotham A", "Gotham B";
+  font-weight: 400;
+  font-style: normal; }
+
+.footerSocial {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  padding: 0;
+  margin: 0; }
+  .footerSocial li:first-child {
+    margin-left: 0; }
+  .footerSocial li {
     display: inline-block;
     font-size: 2.5em;
-    font-family: "Tungsten A", "Tungsten B";
-    font-weight: 600;
-    font-style: normal; }
-  .footerContainer p.footerTag {
-    margin: 0 0 0 15px;
-    padding: 0;
-    display: inline-block;
-    font-family: "Gotham A", "Gotham B";
-    font-weight: 400;
-    font-style: normal; }
+    margin-left: 25px; }
 
 * {
   box-sizing: border-box; }
@@ -392,7 +453,7 @@ a {
   transition: all 400ms ease; }
 
 a:hover {
-  color: #A061AA;
+  color: #F3F3F3;
   transition: all 400ms ease; }
 
 p a {
@@ -414,7 +475,7 @@ p {
   speak: none; }
 
 [data-social-icon]:before {
-  font-family: "SSSocialRegular";
+  font-family: "SSSocialCircle";
   content: attr(data-social-icon);
   speak: none; }
 

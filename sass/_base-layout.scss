@@ -12,7 +12,7 @@ a {
 }
 
 a:hover {
-  color: #A061AA;
+  color: #F3F3F3;
   transition: all 400ms ease;
 }
 
@@ -39,7 +39,7 @@ p {
 }
 
 [data-social-icon]:before {
-  font-family: "SSSocialRegular";
+  font-family: "SSSocialCircle";
   content: attr(data-social-icon);
   speak: none;
 }
