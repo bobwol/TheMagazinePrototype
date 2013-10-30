@@ -68,6 +68,10 @@ app.get('/', function(req, res, next) {
   res.render('index');
 });
 
+app.get('/post', function(req, res, next) {
+  res.render('post');
+});
+
 
 // Initialize the application routes
 //routes(app);

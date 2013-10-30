@@ -62,6 +62,9 @@ h1 {
 h1.tungsten-head {
   font-size: 4.5em; }
 
+h2.tungsten-head {
+  font-size: 3.5em; }
+
 h2 {
   font-size: 1.5em; }
 
@@ -202,19 +205,33 @@ footer {
 .footerContainer {
   width: 88%;
   margin: 0 auto; }
-  .footerContainer .footerFirstRow:before, .footerContainer .footerFirstRow:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .footerContainer .footerFirstRow:after {
-    clear: both; }
-  .footerContainer .footerFirstRow .footerHeading {
-    float: left;
-    width: 70%; }
-  .footerContainer .footerFirstRow .footerSocial {
-    float: left;
-    width: 30%; }
+  .footerContainer .footerFirstRow {
+    padding: 20px; }
+    .footerContainer .footerFirstRow:before, .footerContainer .footerFirstRow:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .footerContainer .footerFirstRow:after {
+      clear: both; }
+    .footerContainer .footerFirstRow .footerHeading {
+      float: none;
+      width: 100%; }
+      @media only screen and (min-width: 48em) {
+        .footerContainer .footerFirstRow .footerHeading {
+          float: left;
+          width: 70%; } }
+    .footerContainer .footerFirstRow .footerSocial {
+      float: none;
+      width: 100%; }
+      @media only screen and (min-width: 48em) {
+        .footerContainer .footerFirstRow .footerSocial {
+          float: left;
+          width: 30%; } }
+      .footerContainer .footerFirstRow .footerSocial a {
+        color: #F3F3F3; }
+      .footerContainer .footerFirstRow .footerSocial a:hover {
+        color: #CCC; }
   .footerContainer .footerSecondRow:before, .footerContainer .footerSecondRow:after {
     content: "\0020";
     display: block;
@@ -224,14 +241,20 @@ footer {
     clear: both; }
   .footerContainer .footerSecondRow .footerMenu {
     margin: 0;
-    padding-bottom: 20px;
-    width: 180px; }
+    width: 100%; }
+    @media only screen and (min-width: 48em) {
+      .footerContainer .footerSecondRow .footerMenu {
+        padding-bottom: 20px;
+        width: 180px; } }
     .footerContainer .footerSecondRow .footerMenu li {
       font-family: "Gotham A", "Gotham B";
       font-weight: 400;
       font-style: normal;
-      text-align: right;
+      text-align: left;
       margin: 10px 0; }
+      @media only screen and (min-width: 48em) {
+        .footerContainer .footerSecondRow .footerMenu li {
+          text-align: right; } }
       .footerContainer .footerSecondRow .footerMenu li a {
         color: #FFF; }
   .footerContainer .footerThirdRow {
@@ -245,6 +268,7 @@ footer {
 
 .footerHeading h2.tungsten-head {
   color: #FFF;
+  margin: 0;
   display: block;
   font-size: 2.5em;
   font-family: "Tungsten A", "Tungsten B";
@@ -254,7 +278,7 @@ footer {
     .footerHeading h2.tungsten-head {
       display: inline-block; } }
 .footerHeading p.footerTag {
-  margin: 0 0 0 15px;
+  margin: 0;
   padding: 0;
   display: block;
   font-family: "Gotham A", "Gotham B";
@@ -262,19 +286,25 @@ footer {
   font-style: normal; }
   @media only screen and (min-width: 64em) {
     .footerHeading p.footerTag {
-      display: inline-block; } }
+      display: inline-block;
+      margin: 0 0 0 15px; } }
 
 .footerSocial {
-  position: relative;
-  top: 40px;
-  left: 40px;
   padding: 0;
-  margin: 0; }
+  margin: 20px 0;
+  text-align: center; }
+  @media only screen and (min-width: 48em) {
+    .footerSocial {
+      margin: 0;
+      position: relative;
+      text-align: right;
+      top: 10px;
+      left: 40px; } }
   .footerSocial li:first-child {
     margin-left: 0; }
   .footerSocial li {
     display: inline-block;
-    font-size: 2.5em;
+    font-size: 2.125em;
     margin-left: 25px; }
 
 .featuredArticle {
@@ -464,7 +494,7 @@ footer {
       font-size: 0.875em; }
       @media only screen and (min-width: 30em) {
         .articleCaption .articleMeta .articleSnippet {
-          font-size: 1em; } }
+          font-size: 0.938em; } }
 
 .team-container h3 {
   text-align: center; }
@@ -495,8 +525,15 @@ footer {
       color: #333;
       font-size: 1.125em; }
 
+.postContent .tungsten-head {
+  font-size: 3em;
+  font-weight: 600; }
+
 * {
   box-sizing: border-box; }
+
+html {
+  height: 100%; }
 
 a {
   text-decoration: none;

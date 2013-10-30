@@ -7,25 +7,46 @@ footer {
   width: 88%;
   margin: 0 auto;
   .footerFirstRow {
+    padding: 20px;
     @include clear();
     .footerHeading {
-      float: left;
-      width: 70%;
+      float: none;
+      width: 100%;
+      @include breakpoint(tabletportrait) {
+        float: left;
+        width: 70%;
+      }
     }
     .footerSocial {
-      float: left;
-      width: 30%;
+      float: none;
+      width: 100%;
+      @include breakpoint(tabletportrait) {
+        float: left;
+        width: 30%;
+      }
+      a {
+        color: #F3F3F3;
+      }
+      a:hover {
+        color: #CCC;
+      }
     }
   }
   .footerSecondRow {
     @include clear();
     .footerMenu {
       margin: 0; 
-      padding-bottom: 20px;
-      width: 180px;
+      width: 100%;
+      @include breakpoint(tabletportrait) {
+        padding-bottom: 20px;
+        width: 180px;
+      }
       li {
         @include gotham-book();
-        text-align: right;
+        text-align: left;
+        @include breakpoint(tabletportrait) {
+          text-align: right;
+        }
         margin: 10px 0;
         a {
           color: #FFF;
@@ -47,6 +68,7 @@ footer {
 .footerHeading {
   h2.tungsten-head {
     color: #FFF;
+    margin: 0;
     @include breakpoint(tabletlandscape) {
       display: inline-block;
     }
@@ -55,28 +77,34 @@ footer {
     @include tungsten-semibold();
   }
   p.footerTag {
-    margin: 0 0 0 15px;
+    margin: 0;
     padding: 0;
     display: block;
     @include breakpoint(tabletlandscape) {
       display: inline-block;
+      margin: 0 0 0 15px;
     }
     @include gotham-book();
   }
 }
 
 .footerSocial {
-  position: relative;
-  top: 40px;
-  left: 40px;
   padding: 0;
-  margin: 0;
+  margin: 20px 0;
+  text-align: center;
+  @include breakpoint(tabletportrait) {
+    margin: 0;
+    position: relative;
+    text-align: right;
+    top: 10px;
+    left: 40px;
+  }
   li:first-child {
     margin-left: 0;
   }
   li {
     display: inline-block;
-    font-size: $font-size-40;
+    font-size: $font-size-34;
     margin-left: 25px;
   }
 }
