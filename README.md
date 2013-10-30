@@ -10,7 +10,7 @@ Prototype mockup of the TheMagazine Layout.  This online magazine layout helps c
 1. clone this repo with git: `git clone https://github.com/slhernandez/TheMagazinePrototype.git`
 1. go into the directory that was created by git: `cd TheMagazinePrototype`
 1. install dependencies with npm: `npm i`
-1. run it: `node server`
+1. run it: `node app.js`
 1. open http://localhost:5001 in a browser
 
 ![WebPrototype - Boilerplate for creating websites](public/images/MagazineHome_700.jpg "WebPrototype")
